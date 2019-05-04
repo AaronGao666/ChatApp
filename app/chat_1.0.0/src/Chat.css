@@ -1,0 +1,217 @@
+body {
+    background: #C5DDEB;
+    font: 14px/20px "Lato", Arial, sans-serif;
+    padding: 40px 0;
+    color: black;
+}
+
+
+.chat-app {
+    background: #F2F5F8;
+    margin: auto;
+    border-radius: 5px;
+    height: 97vh;
+    width: 950px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 15fr 1fr;
+    grid-template-areas: 'selfInfo chatTitle' 'userListPanel message-list-panel' 'userListPanel outgoing';
+}
+
+.self-info {
+    grid-area: selfInfo;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    background-color: #BEBBBB;
+    border-bottom: 2px solid white;
+    border-top-left-radius: 5px;
+}
+
+.self-info-buttons {
+    height: 100%;
+}
+
+.user-self-name {
+    border-top-left-radius: 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.log-out-button {
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    background-color: #E2EFDE;
+    border: none;
+    border-right: 2px dashed #BEBBBB;
+}
+
+.edit-info-button {
+    width: 50%;
+    height: 100%;
+    background-color: #E2EFDE;
+    border: none;
+}
+
+.chat-title {
+    grid-area: chatTitle;
+}
+
+.user-list-panel {
+    max-width: 280px;
+    grid-area: userListPanel;
+    display: grid;
+    grid-template-rows: 1fr 15fr 1fr;
+    background: #625F63;
+    border-bottom-left-radius: 5px;
+}
+
+.user-list-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.user-list-tabs > div {
+    text-align: center;
+}
+
+.user-list {
+    height: 90%;
+}
+
+.user-list-wrap {
+    overflow-y: auto;
+}
+
+.user-list-wrap::-webkit-scrollbar {
+    width: 5px;
+}
+
+.group-list-wrap {
+    overflow-y: auto;
+}
+
+.group-list-wrap::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.add-buttons > button {
+    width: 50%;
+    height: 100%;
+    border: none;
+    background: #A5A5A5;
+    color: #F2F5F8;
+}
+
+.add-friend {
+    border-bottom-left-radius: 5px;
+}
+
+
+.user {
+    list-style-type: square;
+    color: #FCFCFC;
+    margin-bottom: 15px;
+}
+
+.group {
+    list-style-type: square;
+    color: #FCFCFC;
+    margin-bottom: 15px;
+}
+
+.chat-title {
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+
+.message-list-panel {
+    padding: 30px 30px 20px;
+    border-bottom: 2px solid white;
+    overflow-y: scroll;
+}
+
+.message-list {
+    list-style: none;
+}
+
+.message {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.error-message{
+    color: red;
+}
+.username {
+    font-family: Verdana, sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.time-stamp {
+    font-family: Verdana, sans-serif;
+    opacity: 0.5;
+    font-size: 70%;
+}
+
+.message-text {
+    font-size: 80%;
+    grid-column: 2 / 3;
+    font-family: Verdana, sans-serif;
+}
+
+
+.outgoing {
+    grid-area: outgoing;
+    border-radius: 5px;
+}
+
+.to-send {
+    width: 90%;
+    box-sizing: border-box;
+    border: none;
+    border-right: 6px solid white;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-family: Gill Sans, sans-serif;
+}
+
+.send-button {
+    width: 10%;
+    color: #94C2ED;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #F2F5F8;
+}
+
+.send-button:hover:enabled {
+    color: #59CD90;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130%;
+    height: 115%;
+    z-index: -1;
+}
+
+.back-drop {
+    background-color: rgba(48, 49, 48, 0.42);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    transition: all 1.3s;
+}
